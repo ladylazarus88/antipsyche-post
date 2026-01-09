@@ -11,14 +11,10 @@
             "id": "dc158b03c57f45e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/linguistica/prova 1.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "prova 1"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/linguistica/prova 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a prova 1"
+              "title": "Riferimenti"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/linguistica/prova 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da prova 1"
+              "title": "Collegamenti in uscita"
             }
           },
           {
@@ -194,7 +188,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc158b03c57f45e4",
+  "active": "ae62e79f210936d3",
   "lastOpenFiles": [
     "post/linguistica/prova.md",
     "post/linguistica/prova 1.md",
