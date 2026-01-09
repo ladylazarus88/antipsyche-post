@@ -7,7 +7,7 @@ date: ""
 image: ""
 image_alt: ""
 excerpt: ""
-categories:
+categories: Recensione
 type:
 tags:
 lang: it

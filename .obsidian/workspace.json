@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "info/_README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "_README"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "8795ea4d7344523a",
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,12 +194,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc158b03c57f45e4",
+  "active": "ae62e79f210936d3",
   "lastOpenFiles": [
+    "info",
+    "templates/_template-recensione.md",
+    "templates/_template-contrappunti.md",
+    "info/_README.md",
+    "post",
+    "templates",
+    "posts/post/_template.md",
+    "posts/post",
+    "_posts",
+    "Templates",
+    "Senza nome 1",
+    "CONFIGURAZIONE_CLAUDIO",
     "post/recensioni/recensione-harris.md",
     "Senza nome.base",
-    "README.md",
-    "post/_template.md",
+    "CONFIGURAZIONE_CLAUDIO/post/_template.md",
     "post/linguistica/_template 1.md",
     "post/_template 1.md",
     "post/linguistica/prova 1.md",

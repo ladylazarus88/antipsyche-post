@@ -10,47 +10,39 @@ Questo repository contiene **esclusivamente** i testi (articoli, recensioni, sag
 
 ```
 antipsyche-post/
-├─ assets/  
-│  └─ img/
-├─ post/
-│  ├─ _template.md
-│  ├─ filosofia/
-│  ├─ letteratura/
-│  ├─ linguistica/
-|  └─ recensioni
-└─ README.md
+├─ .obsidian/       [CARTELLA SYSTEM NASCOSTA PRIVATA]
+├─ .git/            [CARTELLA SYSTEM NASCOSTA PRIVATA]
+├─ posts/ 
+├─ info
+	└─ _README.md
+└─templates/
+	├─ _template-contrappunti.md
+	└─ _template-recensione.md
+
 ```
 
 ### Significato delle cartelle
 
-- `post/`  
-    Contiene **tutti i testi pubblicabili**.
-    
-- `post/_template.md`  
-    **Modello obbligatorio** da copiare per ogni nuovo articolo.
-    
-- `post/filosofia/`, `post/letteratura/`, ecc.  
-    Scegli **una sola cartella tematica** per ogni testo.
-    
-- `assets/img/`  
-    (Opzionale) immagini locali, se non usi immagini esterne. **Preferibile inserimento diretto url da immagine sul web** per non sovraccaricare il repository interno.  
-    
-
+- `posts/`  
+    Dove devi inserire tutti i **nuovi articoli da pubblicare**.
+- `templates/`  
+    Contiene i **modelli obbligatori** da copiare per ogni nuovo articolo.
+- `info/`  
+    Contiene **ME**: la guida che stai leggendo.
 ---
 
 ## 2. Come creare un nuovo articolo (OBBLIGATORIO)
 
-### Duplica il template e sposta il nuovo file nella cartella giusta
+### Duplica il template e sposta il nuovo file nella cartella post
 
-- Apri `post/_template.md`
+- **Seleziona** uno dei due template disponibili nella cartella `templates`
     
-- Duplica il file 
-	Tasto destro, "Crea una copia".
+- **Duplica** il file (tasto destro, "Crea una copia").
 	
-- Rinominalo in **kebab-case**, ad esempio:
+- **Rinominalo** in **kebab-case**, ad esempio:
     prova-di-post.md
     
-- Spostalo nella cartella corretta in base alla tipologia di contenuto.
+- **Spostalo** nella cartella **posts**.
 
 ---
 
@@ -127,11 +119,11 @@ Quando hai finito di scrivere o aggiornare un testo da Obsidian, questo viene au
 
 ## 7. Cose da NON fare
 
-- Non modificare `_template.md`  
-- Non cambiare la struttura delle cartelle  
-- Non cancellare file altrui  
-- Non usare Word / Google Docs  
-- Non rimuovere campi dal frontmatter
+- Non modificare niente se non il contenuto della cartella **posts**.
+- **Non cambiare la struttura delle cartelle**.
+- Non cancellare file di sistema.  
+- Non usare Word / Google Docs.
+- **Non rimuovere campi dal frontmatter**
 
 ---
 
