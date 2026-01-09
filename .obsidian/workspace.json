@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "4e7a7a9619d7d431",
+    "id": "abefbdba840c8fd1",
     "type": "split",
     "children": [
       {
-        "id": "c2eb616f99f4bb97",
+        "id": "1feb60c8bc49be74",
         "type": "tabs",
         "children": [
           {
-            "id": "dc158b03c57f45e4",
+            "id": "03910a5bb5b5e19d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "info/_README.md",
+                "file": "_posts/_template-contrappunti 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_README"
+              "title": "_template-contrappunti 1"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "c0766d2ce87b083a",
+    "id": "5b5e0a8e87dd0018",
     "type": "split",
     "children": [
       {
-        "id": "031b182aa1353c12",
+        "id": "ff06e9f55580a002",
         "type": "tabs",
         "children": [
           {
-            "id": "ae62e79f210936d3",
+            "id": "fe9554d46546a62b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "a096dd5f5168c95e",
+            "id": "1193c5f50d9c086c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "20f6a08494c7cebb",
+            "id": "779f8614509509ec",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +78,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "8795ea4d7344523a",
+    "id": "e31eec0212781fd2",
     "type": "split",
     "children": [
       {
-        "id": "b5c0e86401a6d0e6",
+        "id": "cd1be347d4439282",
         "type": "tabs",
         "children": [
           {
-            "id": "0064d6f4cbe8abb5",
+            "id": "d7a30b9c610629b7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +103,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a README"
+              "title": "Riferimenti"
             }
           },
           {
-            "id": "8729761d8c82bcb4",
+            "id": "ba89294a7404aa02",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da README"
+              "title": "Collegamenti in uscita"
             }
           },
           {
-            "id": "c72740010530081f",
+            "id": "b51cf50e0ecbae73",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +135,7 @@
             }
           },
           {
-            "id": "0b1eac2504df1fe3",
+            "id": "90bb249add40f86f",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,22 +149,21 @@
             }
           },
           {
-            "id": "f1c47b4559b5e0b6",
+            "id": "06a1f72cbdb2a2d5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di README"
+              "title": "Struttura"
             }
           },
           {
-            "id": "def7ea508f640106",
+            "id": "e098c4df7ed17649",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -180,7 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,26 +191,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ae62e79f210936d3",
+  "active": "fe9554d46546a62b",
   "lastOpenFiles": [
-    "info",
-    "templates/_template-recensione.md",
     "templates/_template-contrappunti.md",
-    "info/_README.md",
-    "post",
-    "templates",
-    "posts/post/_template.md",
-    "posts/post",
-    "_posts",
-    "Templates",
-    "Senza nome 1",
-    "CONFIGURAZIONE_CLAUDIO",
-    "post/recensioni/recensione-harris.md",
-    "Senza nome.base",
-    "CONFIGURAZIONE_CLAUDIO/post/_template.md",
-    "post/linguistica/_template 1.md",
-    "post/_template 1.md",
-    "post/linguistica/prova 1.md",
-    "post/linguistica/prova.md"
+    "templates/_template-recensione.md",
+    "antipsyche-post/_posts/_template-contrappunti 1.md",
+    "antipsyche-post/templates/_template-contrappunti.md",
+    "antipsyche-post/templates/_template-recensione.md",
+    "antipsyche-post/info/_README.md",
+    "_post/_template-contrappunti 1.md"
   ]
 }
