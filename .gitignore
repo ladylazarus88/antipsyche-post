@@ -5,11 +5,11 @@
 .DS_Store
 *.tmp
 *.log
+.git
 
 # Ignora cartelle personali
-_claudio_posts/
-_private/
-_templates/
+info/
+templates/
 
 # Ignora plugin data (contiene dati personali)
 *.json
