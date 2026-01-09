@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/recensioni/recensione-harris.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "recensione-harris"
+              "title": "README"
             }
           }
         ]
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ae62e79f210936d3",
+  "active": "dc158b03c57f45e4",
   "lastOpenFiles": [
-    "Senza nome.base",
     "post/recensioni/recensione-harris.md",
+    "Senza nome.base",
     "README.md",
     "post/_template.md",
     "post/linguistica/_template 1.md",
