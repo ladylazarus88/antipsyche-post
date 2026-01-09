@@ -1,23 +1,14 @@
-# ========= OBSIDIAN CONFIG =========
-# Ignora TUTTA la configurazione Obsidian
-.obsidian/
-.trash/
-.DS_Store
-*.tmp
-*.log
-.git
+# IGNORA TUTTO per default
+*
 
-# Ignora cartelle personali
-info/
-templates/
-
-# Ignora plugin data (contiene dati personali)
-*.json
-*.css
-*.js
-*.lock
-
-# ========= ECCEZIONI =========
-# MA include i post nella cartella posts/
+# ECCEZIONE: Permetti la cartella posts/
 !posts/
-posts/*.md
+
+# ECCEZIONE: Permetti i file .md dentro posts/
+!posts/*.md
+
+# ECCEZIONE: Permetti eventuali sottocartelle
+!posts/**/
+
+# ECCEZIONE: Permetti file .md nelle sottocartelle
+!posts/**/*.md
