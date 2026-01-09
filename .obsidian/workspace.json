@@ -13,12 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "post/recensione-harris.md",
+=======
+                "file": "README.md",
+>>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "recensione-harris"
+=======
+              "title": "README"
+>>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
             }
           }
         ]
@@ -94,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/linguistica/_template 1.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +112,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a _template 1"
+              "title": "Riferimenti a README"
             }
           },
           {
@@ -113,12 +121,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/linguistica/_template 1.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da _template 1"
+              "title": "Collegamenti in uscita da README"
             }
           },
           {
@@ -156,13 +164,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/linguistica/_template 1.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di _template 1"
+              "title": "Struttura di README"
             }
           },
           {
@@ -180,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 281.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,10 +205,15 @@
   "active": "dc158b03c57f45e4",
   "lastOpenFiles": [
     "post/_template.md",
+<<<<<<< HEAD
     "post/recensione-harris.md",
     "README.md",
     "Senza nome.base",
+=======
+    "README.md",
+>>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
     "post/linguistica/_template 1.md",
+    "post/_template 1.md",
     "post/linguistica/prova 1.md",
     "post/linguistica/prova.md"
   ]
