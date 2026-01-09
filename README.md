@@ -104,36 +104,25 @@ draft: true
 - Le immagini nel testo sono opzionali ma tendezialmente sarebbe auspicabile avere sempre in apertura un'immagine di copertina. (Quelle del frontmatter servono a gestire il contenuto su altre pagine, quindi anche se le inserisci non le vedrai sulla pagina dell'articolo).
 	- ``` ![brevissima caption immagine](URL) ```
 ---
-##  5. Usare Obsidian
+##  5. Come fare commit e push (workflow base)
 
-### Apertura del progetto (una tantum)
+Quando hai finito di scrivere o aggiornare un testo da Obsidian, questo viene automaticamente salvato nella tua cartella locale. Adesso:
 
-1. Clona il repository sul tuo computer
+1. Apri **GitKraken**
+       
+2. Scrivi un **messaggio di commit** chiaro, es:
     
-2. Apri la cartella `antipsyche-post` come **Vault Obsidian**
-### Plugin utili
-
-- **Obsidian Git** → per commit e push
+  ```
+   Aggiunta recensione su Robert Schneider
+   ```
     
-- **Templates** → per duplicare `_template.md`
-
-## 6. Come fare commit e push (workflow base)
-
-Quando hai finito di scrivere o aggiornare un testo:
-
-1. Apri Obsidian
-    
-2. Apri il plugin **Obsidian Git**
-    
-3. Scrivi un messaggio di commit chiaro, es:
-    
-    ```
-    Aggiunta recensione su Robert Schneider
-    ```
-    
-4. Fai **Commit**
-    
-5. Fai **Push**. Fine
+3. Fai **Commit**.
+	
+	
+4. Fai **Push**. 
+	
+	
+5. Fine
 ---
 
 ## 7. Cose da NON fare
@@ -146,18 +135,3 @@ Quando hai finito di scrivere o aggiornare un testo:
 
 ---
 
-## 8️⃣ In caso di dubbio
-
-Se non sei sicuro:
-
-- **lascia `draft: true`**
-    
-- chiedi prima di pubblicare
-    
-- meglio un campo in più che uno in meno
-    
-
----
-
-Grazie per il tuo lavoro ✍️  
-Antipsyche
