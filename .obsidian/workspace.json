@@ -13,20 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "post/recensione-harris.md",
-=======
-                "file": "README.md",
->>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
+                "file": "post/recensioni/recensione-harris.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
               "title": "recensione-harris"
-=======
-              "title": "README"
->>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
             }
           }
         ]
@@ -188,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 205.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,16 +194,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc158b03c57f45e4",
+  "active": "ae62e79f210936d3",
   "lastOpenFiles": [
-    "post/_template.md",
-<<<<<<< HEAD
-    "post/recensione-harris.md",
-    "README.md",
     "Senza nome.base",
-=======
+    "post/recensioni/recensione-harris.md",
     "README.md",
->>>>>>> 0f7140cb890d814b4c2eae7731bbdd6cc64285d4
+    "post/_template.md",
     "post/linguistica/_template 1.md",
     "post/_template 1.md",
     "post/linguistica/prova 1.md",
