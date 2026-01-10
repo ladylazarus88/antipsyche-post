@@ -1,7 +1,5 @@
 name: 🎨 Blog Post Preview
-permissions:
-  contents: read
-  
+
 on:
   push:
     branches: [main]
