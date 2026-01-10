@@ -13,11 +13,12 @@ antipsyche-post/
 ├─ .obsidian/       [CARTELLA SYSTEM NASCOSTA PRIVATA]
 ├─ .git/            [CARTELLA SYSTEM NASCOSTA PRIVATA]
 ├─ posts/ 
-├─ info
-	└─ _README.md
-└─templates/
-	├─ _template-contrappunti.md
-	└─ _template-recensione.md
+├─ templates/
+|	├─ _template-contrappunti.md
+|	└─ _template-recensione.mdinfo
+|	└─ _
+├─ README.md		[LA GUIDA CHE STAI LEGGENDO]
+└─ .gitignore       [FILE DI SISTEMA]
 
 ```
 
@@ -27,8 +28,7 @@ antipsyche-post/
     Dove devi inserire tutti i **nuovi articoli da pubblicare**.
 - `templates/`  
     Contiene i **modelli obbligatori** da copiare per ogni nuovo articolo.
-- `info/`  
-    Contiene **ME**: la guida che stai leggendo.
+  
 ---
 
 ## 2. Come creare un nuovo articolo (OBBLIGATORIO)
