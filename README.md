@@ -33,7 +33,7 @@ antipsyche-post/
 
 ## 2. Come creare un nuovo articolo (OBBLIGATORIO)
 
-### Duplica il template e sposta il nuovo file nella cartella post
+### Duplica il template e sposta il nuovo file nella cartella posts
 
 - **Seleziona** uno dei due template disponibili nella cartella `templates`
     
