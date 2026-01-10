@@ -1,99 +1,56 @@
-name: 🎨 Blog Post Preview
+name: ⚡ Simple Preview
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'posts/**'
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 jobs:
   preview:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: 📥 Checkout posts
+      - name: 📥 Checkout
         uses: actions/checkout@v4
         with:
           repository: ladylazarus88/antipsyche-post
-          path: posts-source
           
-      - name: 🔍 List files
-        run: |
-          echo "Post trovati:"
-          find posts-source -name "*.md" -type f 2>/dev/null || echo "Nessun file .md trovato"
-          
-      - name: 🎨 Build HTML Preview
+      - name: 📝 Create basic preview
         run: |
           mkdir -p _site
           
-          # Inizia HTML
-          cat > _site/index.html << 'HTMLSTART'
-          <!DOCTYPE html>
+          # Crea HTML semplice
+          cat > _site/index.html << 'EOF'
           <html>
-          <head>
-              <title>Antipsyche Preview</title>
-              <style>
-                  body {
-                      font-family: 'Cormorant Garamond', serif;
-                      max-width: 800px;
-                      margin: 0 auto;
-                      padding: 2rem;
-                  }
-                  h1 { color: #c13127; }
-                  .post { 
-                      border-left: 4px solid #c13127; 
-                      padding-left: 1rem; 
-                      margin: 2rem 0; 
-                      padding: 1rem;
-                      background: #f9f9f9;
-                  }
-                  pre {
-                      white-space: pre-wrap;
-                      font-family: monospace;
-                  }
-              </style>
-          </head>
+          <head><title>Preview</title></head>
           <body>
-              <h1>🧠 ANTIPSYCHÉ PREVIEW</h1>
-              <p>Questa è la grafica del sito reale</p>
-          HTMLSTART
+            <h1>Post Preview</h1>
+            <ul>
+          EOF
           
-          # Aggiungi i post in modo SICURO
-          if [ -d "posts-source/posts" ]; then
-            for file in posts-source/posts/*.md; do
+          # Lista file
+          if [ -d "posts" ]; then
+            for file in posts/*.md; do
               if [ -f "$file" ]; then
-                title=$(basename "$file" .md | sed 's/-/ /g')
-                content=$(cat "$file" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g')
-                
-                cat >> _site/index.html << POSTCONTENT
-                <div class="post">
-                    <h2>${title}</h2>
-                    <pre>${content}</pre>
-                </div>
-POSTCONTENT
+                title=$(basename "$file" .md)
+                echo "<li>$title</li>" >> _site/index.html
               fi
             done
-          else
-            echo "<p>Nessun post trovato nella cartella posts/</p>" >> _site/index.html
           fi
           
-          # Chiudi HTML
-          cat >> _site/index.html << 'HTMLEND'
+          cat >> _site/index.html << 'EOF'
+            </ul>
           </body>
           </html>
-          HTMLEND
+          EOF
           
-          echo "✅ Preview HTML creata in _site/"
+          echo "File creato!"
           ls -la _site/
           
-      - name: 🚀 Deploy to GitHub Pages
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: _site
+          
+      - name: 🌐 Deploy
         uses: actions/deploy-pages@v3
