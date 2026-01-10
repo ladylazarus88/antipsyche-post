@@ -1,5 +1,5 @@
 ---
-title: Le voci del mondo
+title: Le voci del mondo 2
 author: Robert Schneider
 date: 2026-01-05
 image: https://europa.tips/wordpress/wp-content/uploads/Avrupanin-Ghibli-Ruhu-Tasiyan-9-Masalsi-Koeyuewebp.webp
@@ -19,7 +19,7 @@ tags:
 
 Come potrebbe un uomo dire onestamente di amare la propria donna se, per la vita intera, si limita ad amarla di giorno? Come potrebbe giurare davanti a Dio il suo amore se, dormendo, se ne dimentica? Sarebbe, allora, un amore falso, un amore a metà; ma l’amore non conosce le parti, non è analitico, ma sintetico. Perché durante il sonno non si ama; si è come morti, o come in uno stato di sospensione dell’essere. Per tale ragione, la morte è detta sorella del sonno. Dormire vuol dire perder tempo, un tempo di cui ci verrà chiesto il conto in Purgatorio, o all’Inferno. 
 
-*Chi ama davvero, non dorme.*
+*Chi ama davvero, non.*
 
 ‘**Le voci del mondo**’, il romanzo antimoderno di **Robert Schneider**, quando venne dato alle stampe fu subito un enorme caso letterario: oltre 100.000 copie vendute in un anno, tra le critiche, le recensioni entusiaste e i clamori del grande pubblico di lettori dello *Zeit*, dello *Spiegel* e di altre riviste tedesche. Un bozzetto rustico e macabro che dipinge iper realisticamente la vita del genio Elias, una vita spezzata dalla sulfurea atmosfera spettrale e bigotta di un piccolo e isolato villaggio austriaco. Un ritratto instabile che cela il tentativo di trattenervi al suo interno secoli e secoli di tensioni metafisiche di stampo romantico. 
 
