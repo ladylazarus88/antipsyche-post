@@ -1,14 +1,11 @@
-name: 🎨 Blog Post Preview
+name: ⚡ Preview Funzionante
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'posts/**'
   workflow_dispatch:
 
 permissions:
-  contents: read
   pages: write
   id-token: write
 
@@ -20,84 +17,45 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: 📥 Checkout posts
+      - name: 📥 Get posts
         uses: actions/checkout@v4
         with:
           repository: ladylazarus88/antipsyche-post
-          path: posts-source
           
-      - name: 🔍 List files
-        run: |
-          echo "Post trovati:"
-          find posts-source -name "*.md" -type f 2>/dev/null || echo "Nessun file .md trovato"
-          
-      - name: 🎨 Build HTML Preview
+      - name: 🎨 Create preview
         run: |
           mkdir -p _site
           
-          # Inizia HTML
-          cat > _site/index.html << 'HTMLSTART'
+          # HTML base
+          cat > _site/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
               <title>Antipsyche Preview</title>
+              <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
               <style>
-                  body {
-                      font-family: 'Cormorant Garamond', serif;
-                      max-width: 800px;
-                      margin: 0 auto;
-                      padding: 2rem;
-                  }
+                  body { font-family: 'Cormorant Garamond', serif; padding: 2rem; }
                   h1 { color: #c13127; }
-                  .post { 
-                      border-left: 4px solid #c13127; 
-                      padding: 1rem;
-                      margin: 2rem 0; 
-                      background: #f9f9f9;
-                  }
-                  pre {
-                      white-space: pre-wrap;
-                      font-family: monospace;
-                  }
               </style>
           </head>
           <body>
-              <h1>🧠 ANTIPSYCHÉ PREVIEW</h1>
-              <p>Questa è la grafica del sito reale</p>
-          HTMLSTART
+              <h1>Antipsyche Preview</h1>
+          EOF
           
-          # Aggiungi i post in modo SICURO
-          if [ -d "posts-source/posts" ]; then
-            for file in posts-source/posts/*.md; do
-              if [ -f "$file" ]; then
-                title=$(basename "$file" .md | sed 's/-/ /g')
-                content=$(cat "$file" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g')
-                
-                cat >> _site/index.html << POSTCONTENT
-                <div class="post">
-                    <h2>${title}</h2>
-                    <pre>${content}</pre>
-                </div>
-POSTCONTENT
-              fi
+          # Aggiungi post se esistono
+          if [ -d "posts" ]; then
+            for file in posts/*.md; do
+              title=$(basename "$file" .md)
+              echo "<h2>$title</h2>" >> _site/index.html
             done
-          else
-            echo "<p>Nessun post trovato nella cartella posts/</p>" >> _site/index.html
           fi
           
-          # Chiudi HTML
-          cat >> _site/index.html << 'HTMLEND'
-          </body>
-          </html>
-          HTMLEND
+          echo "</body></html>" >> _site/index.html
           
-          echo "✅ Preview HTML creata in _site/"
-          ls -la _site/
-          
-      - name: 📤 Upload artifact (V4 - CORRETTA)
-        uses: actions/upload-pages-artifact@v3  # ← CAMBIATO DA v2 A v3
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
           
-      - name: 🌐 Deploy to GitHub Pages
+      - name: 🌐 Deploy
         uses: actions/deploy-pages@v3
