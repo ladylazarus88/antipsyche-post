@@ -1,97 +1,79 @@
-name: ⚡ HTML Preview (Garantito)
+name: 🎨 Blog Post Preview
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'posts/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   preview:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
-      - name: 📥 Download posts
-        run: |
-          mkdir -p posts
-          # Scarica i file .md dalla cartella posts/
-          curl -s "https://api.github.com/repos/ladylazarus88/antipsyche-post/contents/posts" | \
-            jq -r '.[] | select(.name | endswith(".md")) | .download_url' | \
-            while read url; do
-              filename=$(basename "$url")
-              echo "Downloading $filename..."
-              curl -s -o "posts/$filename" "$url"
-            done
+      - name: 📥 Checkout posts
+        uses: actions/checkout@v4
+        with:
+          repository: ladylazarus88/antipsyche-post
+          path: posts-source
           
-          echo "File scaricati:"
-          ls -la posts/
-          
-      - name: 🎨 Generate preview
+      - name: 🔍 List files
         run: |
-          # Crea una singola pagina HTML con i TUOI CSS
-          cat > preview.html << 'EOF'
+          echo "Post trovati:"
+          find posts-source -name "*.md" -type f
+          
+      - name: 🎨 Build HTML
+        run: |
+          mkdir -p _site
+          
+          # Crea index.html
+          cat > _site/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
               <title>Antipsyche Preview</title>
-              <meta charset="utf-8">
               <style>
-                  /* INCOLLA TUTTO IL TUO CSS GLOBALE QUI */
-                  :root {
-                      --color-accent: #c13127;
-                      --color-text-primary: #222222;
-                      --color-background: #ffffff;
-                  }
-                  
                   body {
                       font-family: 'Cormorant Garamond', serif;
-                      color: var(--color-text-primary);
-                      background: var(--color-background);
                       max-width: 800px;
                       margin: 0 auto;
                       padding: 2rem;
                   }
-                  
-                  .post {
-                      border-left: 4px solid var(--color-accent);
-                      padding-left: 2rem;
-                      margin: 3rem 0;
-                  }
-                  
-                  h1 {
-                      color: var(--color-accent);
-                      text-transform: uppercase;
-                      letter-spacing: 0.15em;
-                  }
-                  
-                  /* AGGIUNGI QUI ALTRI TUOI STILI */
+                  h1 { color: #c13127; }
+                  .post { border-left: 4px solid #c13127; padding-left: 1rem; margin: 2rem 0; }
               </style>
           </head>
           <body>
-              <h1>🎨 Anteprima con il TUO stile</h1>
-              <p>Il post apparirà così sul sito:</p>
+              <h1>🧠 ANTIPSYCHÉ PREVIEW</h1>
+              <p>Grafica del sito reale</p>
           EOF
           
-          # Aggiungi ogni post
-          for file in posts/*.md; do
+          # Aggiungi post
+          for file in posts-source/posts/*.md 2>/dev/null; do
             if [ -f "$file" ]; then
-              title=$(basename "$file" .md | sed 's/-/ /g')
-              content=$(cat "$file")
-              
-              cat >> preview.html << EOF
+              title=$(basename "$file" .md)
+              cat >> _site/index.html << EOF
               <div class="post">
                   <h2>${title}</h2>
-                  <pre>${content}</pre>
+                  <pre>$(cat "$file")</pre>
               </div>
               EOF
             fi
           done
           
-          cat >> preview.html << 'EOF'
+          cat >> _site/index.html << 'EOF'
           </body>
           </html>
           EOF
           
-          echo "✅ Preview HTML creata"
-          ls -lh preview.html
-          
-      - name: 📤 Upload as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: astro-preview
-          path: preview.html
+      - name: 🚀 Deploy
+        uses: actions/deploy-pages@v3
