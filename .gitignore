@@ -1,5 +1,13 @@
 # IGNORA TUTTO per default
 *
+.obsidian/
+.trash/
+.DS_Store
+*.tmp
+*.log
+.git
+templates/
+info/
 
 # ECCEZIONE: Permetti la cartella posts/
 !posts/
